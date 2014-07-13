@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>HTML Sound Sucks</title>
+	
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/crafty.js"></script>
+	
+	<!-- Include some sound libraries -->
+	<script type="text/javascript" src="lib/soundjs-0.5.2.min.js"></script>
+	<script type="text/javascript" src="lib/howler.min.js"></script>
+	
+	
+	<script type="text/javascript" src="js/PhoneHelper.js"></script>
+	<script type="text/javascript" src="js/soundTests.js"></script>
+</head>
+<body>
+	<div id="viewport"></div>
+	
+	<audio id="htmlAudio">
+		<source src="water.mp3" type="audio/mpeg">
+		<source src="water.ogg" type="audio/ogg">
+		<source src="water.wav" type="audio/wav">
+		Your browser does not support this audio format.
+	</audio>
+	
+	<script type="application/javascript">
+		
+		$(document).ready(function()
+		{
+			if(PhoneHelper.isPhone()){
+				document.addEventListener("deviceready", Game.load, false);
+			}else{
+				Game.load();
+			}
+		});
+	</script>
+	
+	<input type="button" onClick="document.getElementById('htmlAudio').play();" value="HTML Audio" /><br/><br/>
+	<input type="button" onClick="Crafty.audio.play('water');" value="Crafty Audio" /><br/><br/>
+	<input type="button" onClick="createjs.Sound.play('water');" value="SoundJS Audio" /><br/><br/>
+	<input type="button" onClick="if(typeof Media === 'undefined'){ alert('media is not defined'); return; } Game.gapMP3.play();" value="PhoneGap MP3" /><br/><br/>
+	<input type="button" onClick="if(typeof Media === 'undefined'){ alert('media is not defined'); return; } Game.gapOGG.play();" value="PhoneGap OGG" /><br/><br/>
+	<input type="button" onClick="if(typeof Media === 'undefined'){ alert('media is not defined'); return; } Game.gapWAV.play();" value="PhoneGap WAV" /><br/><br/>
+	<input type="button" onClick="Game.howlin.play();" value="Howler Audio" /><br/><br/>
+		
+</body>
+</html>
