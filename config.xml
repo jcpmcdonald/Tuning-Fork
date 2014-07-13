@@ -25,7 +25,7 @@
     <preference name="android-installLocation" value="auto" />
     
     <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.media" />
+    <gap:plugin name="org.apache.cordova.media" version="0.2.3" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     
     <gap:plugin name="org.apache.cordova.battery-status" />

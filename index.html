@@ -42,10 +42,10 @@
 	<input type="button" onClick="document.getElementById('htmlAudio').play();" value="HTML Audio" /><br/><br/>
 	<input type="button" onClick="Crafty.audio.play('water');" value="Crafty Audio" /><br/><br/>
 	<input type="button" onClick="createjs.Sound.play('water');" value="SoundJS Audio" /><br/><br/>
-	<input type="button" onClick="if(typeof Media === 'undefined'){ alert('media is not defined'); return; } Game.gapMP3.play();" value="PhoneGap MP3" /><br/><br/>
-	<input type="button" onClick="if(typeof Media === 'undefined'){ alert('media is not defined'); return; } Game.gapOGG.play();" value="PhoneGap OGG" /><br/><br/>
-	<input type="button" onClick="if(typeof Media === 'undefined'){ alert('media is not defined'); return; } Game.gapWAV.play();" value="PhoneGap WAV" /><br/><br/>
 	<input type="button" onClick="Game.howlin.play();" value="Howler Audio" /><br/><br/>
+	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapMP3.play();" value="PhoneGap MP3" /><br/><br/>
+	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapOGG.play();" value="PhoneGap OGG" /><br/><br/>
+	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapWAV.play();" value="PhoneGap WAV" /><br/><br/>
 		
 </body>
 </html>
