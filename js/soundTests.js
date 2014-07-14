@@ -12,11 +12,11 @@ var Game = {
 		var ogg = "water.ogg";
 		var wav = "water.wav";
 		
-		if (typeof device !== 'undefined' && device.platform == 'Android') {
-			mp3 = '/android_asset/www/' + mp3;
-			ogg = '/android_asset/www/' + ogg;
-			wav = '/android_asset/www/' + wav;
-		}
+		// if (typeof device !== 'undefined' && device.platform == 'Android') {
+			// mp3 = '/android_asset/www/' + mp3;
+			// ogg = '/android_asset/www/' + ogg;
+			// wav = '/android_asset/www/' + wav;
+		// }
 		
 		
 		// Load the sound all the ways
