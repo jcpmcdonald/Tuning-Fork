@@ -27,7 +27,7 @@
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.file" />
     <gap:plugin name="org.apache.cordova.media-capture" />
-    <gap:plugin name="org.apache.cordova.media" version="0.2.8" />
+    <gap:plugin name="org.apache.cordova.media" version="0.2.11" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     
     <!--
