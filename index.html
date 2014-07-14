@@ -46,6 +46,10 @@
 	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapMP3.play();" value="PhoneGap MP3" /><br/><br/>
 	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapOGG.play();" value="PhoneGap OGG" /><br/><br/>
 	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapWAV.play();" value="PhoneGap WAV" /><br/><br/>
-		
+	
+	<input type="button" onClick="if( window.plugins && window.plugins.LowLatencyAudio ) { alert('LLA is not defined'); return; } window.plugins.LowLatencyAudio.play('water.mp3');" value="LowLatencyAudio MP3" /><br/><br/>
+	<input type="button" onClick="if( window.plugins && window.plugins.LowLatencyAudio ) { alert('LLA is not defined'); return; } window.plugins.LowLatencyAudio.play('water.ogg');" value="LowLatencyAudio OGG" /><br/><br/>
+	<input type="button" onClick="if( window.plugins && window.plugins.LowLatencyAudio ) { alert('LLA is not defined'); return; } window.plugins.LowLatencyAudio.play('water.wav');" value="LowLatencyAudio WAV" /><br/><br/>
+	
 </body>
 </html>
