@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.jcpmcdonald.soundboard" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>Sound Board</name>
+<widget id="com.jcpmcdonald.tuningfork" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Tuning Fork</name>
     <description>
-        HTML Sound Board
+        Tuning Fork for HTML audio
     </description>
     <author email="jcpmcdonald@gmail.com" href="http://jcpmcdonald.com">
         John McDonald
