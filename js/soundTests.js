@@ -12,11 +12,11 @@ var Game = {
 		var ogg = "water.ogg";
 		var wav = "water.wav";
 		
-		if (typeof device !== 'undefined' && device.platform == 'Android') {
+		//if (typeof device !== 'undefined' && device.platform == 'Android') {
 			mp3 = '/android_asset/www/audio/' + mp3;
 			ogg = '/android_asset/www/audio/' + ogg;
 			wav = '/android_asset/www/audio/' + wav;
-		}
+		//}
 		
 		
 		// Load the sound all the ways
