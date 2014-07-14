@@ -29,10 +29,14 @@
 	
 	<script type="application/javascript">
 		
+		function DeviceReady(){
+			Game.load();
+		}
+		
 		$(document).ready(function()
 		{
 			if(PhoneHelper.isPhone()){
-				document.addEventListener("deviceready", Game.load, false);
+				document.addEventListener("deviceready", DeviceReady, false);
 			}else{
 				Game.load();
 			}

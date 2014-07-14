@@ -30,7 +30,7 @@ var Game = {
 		
 		
 		// Using PhoneGap 'Media': http://docs.phonegap.com/en/3.3.0/cordova_media_media.md.html
-		if(typeof Media !== 'undefined'){
+		if(Media){
 			this.gapMP3 = new Media('water.mp3');
 			this.gapOGG = new Media('water.ogg');
 			this.gapWAV = new Media('water.wav');
@@ -39,9 +39,9 @@ var Game = {
 		
 		// Low Latency Audio plugin for PhoneGap: http://plugins.cordova.io/#/package/com.rjfun.cordova.plugin.lowlatencyaudio
 		if( window.plugins && window.plugins.LowLatencyAudio ) {
-			window.plugins.LowLatencyAudio.preloadFX("water.mp3", "water.mp3");
-			window.plugins.LowLatencyAudio.preloadFX("water.ogg", "water.ogg");
-			window.plugins.LowLatencyAudio.preloadFX("water.wav", "water.wav");
+			window.plugins.LowLatencyAudio.preloadFX("water.mp3", "water.mp3", function(){}, function(){ alert('fail'); });
+			window.plugins.LowLatencyAudio.preloadFX("water.ogg", "water.ogg", function(){}, function(){ alert('fail'); });
+			window.plugins.LowLatencyAudio.preloadFX("water.wav", "water.wav", function(){}, function(){ alert('fail'); });
 		}
 	},
 	
