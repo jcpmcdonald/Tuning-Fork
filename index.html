@@ -29,19 +29,19 @@
 	
 	<script type="application/javascript">
 		
-		function DeviceReady(){
-			Game.load();
-		}
+		// function DeviceReady(){
+			// Game.load();
+		// }
 		
 		$(document).ready(function()
 		{
 			if(PhoneHelper.isPhone()){
 				alert("PhoneGap detected");
 			}
-			Game.load();
+			//Game.load();
 		});
 		
-		document.addEventListener("deviceready", DeviceReady, false);
+		//document.addEventListener("deviceready", DeviceReady, false);
 	</script>
 	
 	<input type="button" onClick="document.getElementById('htmlAudio').play();" value="HTML Audio" /><br/><br/>
