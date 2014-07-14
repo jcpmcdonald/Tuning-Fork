@@ -35,11 +35,10 @@
 		
 		$(document).ready(function()
 		{
-			//if(PhoneHelper.isPhone()){
-			//	document.addEventListener("deviceready", DeviceReady, false);
-			//}else{
-				Game.load();
-			//}
+			if(PhoneHelper.isPhone()){
+				alert("PhoneGap detected");
+			}
+			Game.load();
 		});
 		
 		document.addEventListener("deviceready", DeviceReady, false);
@@ -53,9 +52,10 @@
 	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapOGG.play();" value="PhoneGap OGG" /><br/><br/>
 	<input type="button" onClick="if(typeof Media == 'undefined'){ alert('Media is not defined'); return; } Game.gapWAV.play();" value="PhoneGap WAV" /><br/><br/>
 	
-	<input type="button" onClick="if( window.plugins && window.plugins.LowLatencyAudio ) { alert('LLA is not defined'); return; } window.plugins.LowLatencyAudio.play('water.mp3');" value="LowLatencyAudio MP3" /><br/><br/>
-	<input type="button" onClick="if( window.plugins && window.plugins.LowLatencyAudio ) { alert('LLA is not defined'); return; } window.plugins.LowLatencyAudio.play('water.ogg');" value="LowLatencyAudio OGG" /><br/><br/>
-	<input type="button" onClick="if( window.plugins && window.plugins.LowLatencyAudio ) { alert('LLA is not defined'); return; } window.plugins.LowLatencyAudio.play('water.wav');" value="LowLatencyAudio WAV" /><br/><br/>
+	<input type="button" onClick="if(typeof window.plugins !== 'undefined' && typeof window.plugins.LowLatencyAudio !== 'undefined') { window.plugins.LowLatencyAudio.play('water.mp3'); } else { alert('LLA is not defined'); return; } " value="LowLatencyAudio MP3" /><br/><br/>
+	<input type="button" onClick="if(typeof window.plugins !== 'undefined' && typeof window.plugins.LowLatencyAudio !== 'undefined') { window.plugins.LowLatencyAudio.play('water.ogg'); } else { alert('LLA is not defined'); return; } " value="LowLatencyAudio OGG" /><br/><br/>
+	<input type="button" onClick="if(typeof window.plugins !== 'undefined' && typeof window.plugins.LowLatencyAudio !== 'undefined') { window.plugins.LowLatencyAudio.play('water.wav'); } else { alert('LLA is not defined'); return; }" value="LowLatencyAudio WAV" /><br/><br/>
 	
+	<div id="loaded">Not Loaded Yet! <input type="button" value="Manually Load" onClick="Game.load();" /></div>
 </body>
 </html>

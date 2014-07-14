@@ -12,7 +12,7 @@ var Game = {
 		var ogg = "water.ogg";
 		var wav = "water.wav";
 		
-		if (device.platform == 'Android') {
+		if (typeof device !== 'undefined' && device.platform == 'Android') {
 			mp3 = '/android_asset/www/' + mp3;
 			ogg = '/android_asset/www/' + ogg;
 			wav = '/android_asset/www/' + wav;
@@ -41,7 +41,7 @@ var Game = {
 		
 		
 		// Using PhoneGap 'Media': http://docs.phonegap.com/en/3.3.0/cordova_media_media.md.html
-		if(Media){
+		if(typeof Media !== 'undefined'){
 			this.gapMP3 = new Media(mp3);
 			this.gapOGG = new Media(ogg);
 			this.gapWAV = new Media(wav);
@@ -54,6 +54,8 @@ var Game = {
 			window.plugins.LowLatencyAudio.preloadFX(ogg, ogg, function(){}, function(){ alert('fail'); });
 			window.plugins.LowLatencyAudio.preloadFX(wav, wav, function(){}, function(){ alert('fail'); });
 		}
+		
+		$("#loaded").html("Loaded!");
 	},
 	
 }
